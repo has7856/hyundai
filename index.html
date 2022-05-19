@@ -7,6 +7,7 @@
     <title>현대자동차그룹</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="script/script.js"></script>
 </head>
@@ -71,36 +72,55 @@
             <div class="card-img">
                 <a href="#"><img src="images/cardimg1.jpg" alt="카드이미지"></a>
                 <h2>품격 높은 일상과 안전하고 편안한 여가를 제공할 프리미엄 SUV, 더 뉴 펠리세이드</h2>
-                <a href="#"><div class="cover"></div></a>
-                <button><img src="images/ico_time.svg" alt="time-btn img">4분 읽기</button>
+                <button class="reading"><img src="images/ico_time.svg" alt="time-btn img">4분 읽기</button>
             </div>
             <div class="card-img">
-                <div class="card-img2 card-img-left"></div>
+                <div class="card-img2 card-img-left">
+                    <p id="notice-top">채용정보</p>
+                    <h2>현대자동차그룹의<br>새로운 채용 공고를<br>확인해보세요</h2>
+                    <p id="notice-bottom">248 건의<br>채용이 진행중입니다</p>
+                    <button class="reading">바로가기</button>
+                </div>
                 <div class="card-img2 card-img-right">
                     <a href="#"><img src="images/cardimg2.jpg" alt="카드이미지2"></a>
-                    <a href="#"><div class="cover"></div></a>
+                    <h2>[미국 IIHS 차량 안전도 평가 최다 선정의 비결 - ADAS 편]<br>타인의 안전까지 고려한 현대자동차그룹의 전방 충돌방지 보조 기술</h2>
+                    <button class="reading"><img src="images/ico_time.svg" alt="time-btn img">4분 읽기</button>
                 </div>
             </div>
             <div class="card-img">
                 <div class="card-img3 card-img-left2">
                     <a href="#"><img src="images/cardimg3.jpg" alt="카드이미지3"></a>
                     <a href="#"><div class="black"></div></a>
-                    <a href="#"><div class="cover"></div></a>
+                    <h2>[미래 모빌리티 구현을 위한 현대차그룹 특허 시리즈]<br>모빌리티, 안락한 라운지가 되다. ‘모빌리티 온돌’ 콘셉트</h2>
+                    <button class="reading"><img src="images/ico_time.svg" alt="time-btn img">4분 읽기</button>
                 </div>
                 <div class="card-img3 card-img-right2">
                     <a href="#"><img src="images/cardimg4.jpg" alt="카드이미지4"></a>
-                    <a href="#"><div class="cover"></div></a>
+                    <h2>낭만을 전하는 플로리스트의 파트너, 레이 1인승 밴</h2>
+                    <button class="reading"><img src="images/ico_time.svg" alt="time-btn img">4분 읽기</button>
                 </div>
             </div>
             <div class="card-img">
                 <div class="card-img4 green">
-
+                    <p class="new">신입</p>
+                    <h2>현대모비스<br>'22년 상반기 신입사원 모집<br>(글로벌모듈영업)</h2>
+                    <div class="count"></div>
+                    <p class="date">2022-05-11 ~ 2022-05-22</p>
+                    <span class="plus"><i class="xi-plus-thin"></i></span>
                 </div>
                 <div class="card-img4 mint">
-
+                    <p class="new">신입</p>
+                    <h2>현대자동차<br>[구매] 전략소재 구매</h2>
+                    <div class="count"></div>
+                    <p class="date">2022-05-13 ~ 2022-05-22</p>
+                    <span class="plus"><i class="xi-plus-thin"></i></span>
                 </div>
                 <div class="card-img4 blue">
-                    
+                    <p class="new">신입</p>
+                    <h2>현대자동차<br>[구매] 전동화부품 구매/개발</h2>
+                    <div class="count"></div>   
+                    <p class="date">2022-05-13 ~ 2022-05-22</p>   
+                    <span class="plus"><i class="xi-plus-thin"></i></span>              
                 </div>
             </div>
             
@@ -108,11 +128,9 @@
                 <div class="card-img3 card-img-left2">
                     <a href="#"><img src="images/cardimg5.jpg" alt="카드이미지5"></a>
                     <a href="#"><div class="black"></div></a>
-                    <a href="#"><div class="cover"></div></a>
                 </div>
                 <div class="card-img3 card-img-right2">
                     <a href="#"><img src="images/cardimg6.jpg" alt="카드이미지6"></a>
-                    <a href="#"><div class="cover"></div></a>
                 </div>
             </div>
 
@@ -133,11 +151,9 @@
                 <div class="card-img3 card-img-left2">
                     <a href="#"><img src="images/cardimg10.jpg" alt="카드이미지10"></a>
                     <a href="#"><div class="black"></div></a>
-                    <a href="#"><div class="cover"></div></a>
                 </div>
                 <div class="card-img3 card-img-right2">
                     <a href="#"><img src="images/cardimg11.jpg" alt="카드이미지11"></a>
-                    <a href="#"><div class="cover"></div></a>
                 </div>
             </div>
 
@@ -148,14 +164,45 @@
         <footer>
             <div class="footer-wrap">
                 <div>
-                    <div>
+                    <div id="flogo">
                         <a href="#"><img src="images/hmg_logo.svg" alt="header-logo"></a>
                     </div>
-                    <div></div>
+                    <div id="sns">
+                        <ul>
+                            <li><a href="#"><img src="images/footer_logo_facebook.svg" alt="페이스북"></a></li>
+                            <li><a href="#"><img src="images/footer_logo_journal.png" alt="저널"></a></li>
+                            <li><a href="#"><img src="images/footer_logo_twitter.svg" alt="트위터"></a></li>
+                            <li><a href="#"><img src="images/footer_logo_insta.svg" alt="인스타그램"></a></li>
+                            <li><a href="#"><img src="images/footer_logo_youtube.svg" alt="유튜브"></a></li>
+                            <li><a href="#"><img src="images/footer_logo_blog.svg" alt="블로그"></a></li>
+                            <li><a href="#"><img src="images/footer_logo_post.svg" alt="포스트"></a></li>
+                            <li><a href="#"><img src="images/footer_logo_navertv.svg" alt="네이버TV"></a></li>
+                            <li><a href="#"><img src="images/footer_logo_tvkaka.svg" alt="카카오TV"></a></li>
+                            <li><a href="#"><img src="images/footer_logo_brunch.png" alt="브런치"></a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <div></div>
-                    <div></div>
+                <hr>
+                <div id="footer-bottom">
+                    <div>
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">개인정보 처리방침</a></li>
+                            <li><a href="#">법적고지</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">운영정책</a></li>
+                            <li><a href="#">뉴스레터</a></li>
+                            <li><a href="#">KOR/ENG</a></li>
+                        </ul>
+                        <p>&copy;COPYRIGHT 2022 HYUNDAI MOTOR GROUP, ALL RIGHTS RESERVED.</p>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a href="#"><img src="images/footer_mark_wa.png" alt="wa"></a></li>
+                            <li><a href="#"><img src="images/footer_mark_icsi.png" alt="icsi"></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </footer>
