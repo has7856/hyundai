@@ -35,4 +35,8 @@ $(function(){
       
         $(".count").html("D-" + day);
       }, 1000);
+
+      $(".card-img > div").hover(function(){
+          $(".cover",this).stop().fadeToggle();
+      })
 });

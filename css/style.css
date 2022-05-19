@@ -181,7 +181,7 @@ body{
     margin-right: 5px;
     margin-top: 10px;
 }
-.card-img:hover > a > img{
+.card-img > div:hover > a > img{
     transform: scale(1.2);
 }
 .cover{
@@ -196,6 +196,7 @@ body{
 .card-img{
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 .card-img-left{
     width: 410px;
@@ -204,6 +205,7 @@ body{
     border-radius: 15px;
     position: relative;
     text-align: center;
+    overflow: hidden;
 }
 #notice-top{
     display: block;
@@ -215,6 +217,9 @@ body{
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.2);
     font-weight: bold;
+}
+.card-img2{
+    position: relative;
 }
 .card-img-left > h2{
     top: 15%;
@@ -242,10 +247,6 @@ body{
 }
 .card-img-right a > img{
     height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
 }
 .card-img-left2{
     position: relative;
@@ -279,7 +280,7 @@ body{
     height: 100%;
     background-image: linear-gradient(#0000004b, rgba(255, 255, 255, 0.1) ,#0000004b);
 }
-.card-img4{
+.card-img4, .card-img5{
     width: 400px;
     height: 400px;
     background-color: black;
@@ -287,7 +288,6 @@ body{
     overflow: hidden;
 }
 .green{
-    position: relative;
     background-color: #627e0c;
 }
 .count{
@@ -331,12 +331,19 @@ body{
 .plus:hover{
     background-color: rgba(255, 255, 255, 0.6);
 }
+.card-img4,.card-img5{
+    position: relative;
+}
 .card-img4 > h2{
     font-size: 24px;
     line-height: 36px;
     top: 20%;
     left: 150%;
     text-align: left;
+}
+.card-img5 > h2{
+    font-size: 24px;
+    line-height: 36px;
 }
 .new{
     position: absolute;
