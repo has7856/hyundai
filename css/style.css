@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 a{
     text-decoration: none;
@@ -10,9 +11,6 @@ a:visited, a:link{
 }
 ul{
     list-style: none;
-}
-body{
-    width: 100%;
 }
 .header-wrap{
     position: absolute;
@@ -29,12 +27,6 @@ body{
     display: block;
     width: 100%;
     padding-bottom: 1px;
-}
-.container-inner{
-    position: relative;
-}
-.main-billboard{
-    position: relative;
 }
 .bill-contents{
     position: relative;
@@ -54,16 +46,9 @@ body{
     text-align: center;
     transition-duration: 0.6s;
 }
-.main-list{
-    display: inline-block;
-    vertical-align: middle;
-    margin: 15px 31px;
-}
 .main-list > li{
     margin: 60px 0;
     overflow: hidden;
-    width: 240px;
-    height: 336px;
     border-radius: 10px;
     box-shadow: 20px 50px 40px 0 rgba(0, 0, 0, 0.3);
 }
@@ -98,7 +83,7 @@ body{
 }
 
 #menu-tab{
-    width: 1100px;
+    width: 100%;
     margin: 0 auto;
     height: 60px;
     margin-bottom: 60px;
@@ -115,7 +100,7 @@ body{
     display: flex;
     font-size: 20px;
     justify-content: center;
-    column-gap: 200px;
+    column-gap: 15%;
     font-weight: 700;
     line-height: 60px;
 }
@@ -123,10 +108,6 @@ body{
     width: 1280px;
     margin: 0 auto;
     padding-bottom: 120px;
-}
-.card-wrap > div{
-    margin: 20px;
-    border-radius: 20px;
 }
 .card-img{
     overflow: hidden;
@@ -188,7 +169,7 @@ body{
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
     top: 0;
     left: 0;
     display: none;
@@ -286,6 +267,7 @@ body{
     background-color: black;
     border-radius: 15px;
     overflow: hidden;
+    position: relative;
 }
 .green{
     background-color: #627e0c;
@@ -334,11 +316,14 @@ body{
 .card-img4,.card-img5{
     position: relative;
 }
-.card-img4 > h2{
+.card-img4 > h3{
+    position: absolute;
     font-size: 24px;
     line-height: 36px;
     top: 20%;
-    left: 150%;
+    left: 9%;
+    font-weight: bold;
+    color: white;
     text-align: left;
 }
 .card-img5 > h2{
@@ -430,4 +415,99 @@ hr{
     width: 140px;
     height: 25px;
     line-height: 25px;
+}
+.tagcloud-mobile{
+    display: none;
+}
+@media screen and (min-width : 1024px){
+    
+    .main-list{
+        display: inline-block;
+        vertical-align: middle;
+        margin: 15px 30px;
+    }
+    
+    .card-wrap > div{
+        margin: 20px;
+        border-radius: 20px;
+    }
+    
+}
+@media screen and (max-width : 767px){
+    
+    .main-list{
+        display: flex;
+        vertical-align: middle;
+    }
+    .tagcloud-pc{
+        display: none;
+    }
+    .tagcloud-mobile{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+    }
+    .tagcloud-mobile > ul{
+        display: inline-block;
+        width: 50%;
+        margin-top: 150px;
+    }
+    
+    .bill-contents{
+        width: 100%;
+    }
+    .main-list > li{
+        padding: 5px;
+        width: 100%;
+    }
+    .main-list > li > a{
+        width: 100%;
+        height: 300px;
+    }
+    .card-img{
+        display: block;
+        width: 100%;
+    }
+    .card-wrap{
+        width: 100%;
+        padding: 8px;
+    }
+    .card-img div{
+        width: 100%;
+        margin: 20px 0;
+    }
+    .card-img img{
+        width: 100%;
+    }
+    .card-img-right{
+        width: 100%;
+    }
+    footer{
+        padding: 20px;
+        text-align: center;
+    }
+    .footer-wrap{
+        width: 100%;
+    }
+    .footer-wrap > div{
+        display: block;
+    }
+    #sns{
+        width: 100%;
+        margin-top: 30px;
+    }
+    #notice > ul{
+        justify-content: center;
+    }
+    #mark > ul{
+        justify-content: center;
+
+    }
+    .card-img4 > h2{
+        left: 160%;
+    }
+    .main-list li{
+        margin: 0;
+    }
 }
